@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Ascension | Jupiter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --jupiter-orange: #ffa500;
+      --glass: rgba(255,255,255,0.06);
+    }
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 1.5rem 2rem;
+      background: linear-gradient(90deg, rgba(0,0,0,.8), rgba(255,255,255,.05));
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--jupiter-orange);
+      text-shadow: 0 0 20px var(--jupiter-orange);
+    }
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .planet-hero {
+      display: inline-block;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px var(--jupiter-orange);
+      animation: float 14s ease-in-out infinite;
+    }
+    .planet-hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: inherit;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .info {
+      padding: 2rem 2.5rem;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      overflow: auto;
+    }
+    .info h2 {
+      color: var(--jupiter-orange);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px var(--jupiter-orange);
+    }
+    .info h3 {
+      color: var(--jupiter-orange);
+      margin-top: 1.5rem;
+    }
+    .info p, .info li {
+      margin: .6rem 0;
+      line-height: 1.55;
+      font-size: 1rem;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin: .5rem 0;
+    }
+    .stats span {
+      padding: .4rem .8rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,.09);
+      font-size: .85rem;
+      backdrop-filter: blur(6px);
+    }
+    .nav {
+      position: fixed;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .nav a {
+      padding: .5rem .9rem;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #fff;
+      text-decoration: none;
+      font-size: .8rem;
+      backdrop-filter: blur(10px);
+      transition: .25s;
+    }
+    .nav a:hover {
+      background: var(--jupiter-orange);
+      box-shadow: 0 0 10px var(--jupiter-orange);
+    }
+    .back-btn {
+      margin: 2rem auto 0;
+      display: inline-block;
+      padding: .9rem 1.6rem;
+      font-size: 1rem;
+      background: linear-gradient(45deg, var(--jupiter-orange), #ffd700);
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--jupiter-orange);
+      transition: transform .3s;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+    .info::-webkit-scrollbar { width: 8px; }
+    .info::-webkit-scrollbar-thumb { background: var(--jupiter-orange); border-radius: 10px; }
+
+    #page {
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+
+body.fade-out #page {
+  opacity: 0;
+}
+
+  </style>
+</head>
+<body>
+    <div id="page">
+  <nav class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="sun.html">☀️ Sun</a>
+    <a href="mercury.html">☿ Mercury</a>
+    <a href="venus.html">♀ Venus</a>
+    <a href="earth.html">🌍 Earth</a>
+    <a href="mars.html">♂ Mars</a>
+    <a href="jupiter.html" style="background:var(--jupiter-orange)">♃ Jupiter</a>
+    <a href="saturn.html">♄ Saturn</a>
+    <a href="uranus.html">⛢ Uranus</a>
+    <a href="neptune.html">♆ Neptune</a>
+    <a href="beyond.html">🌌 Beyond Neptune</a>
+  </nav>
+  <header><h1>♃ JUPITER</h1></header>
+  <main>
+    <div class="planet-hero">
+      <img src="../assets/images/Jupiter up close!.jpeg" alt="Image of Jupiter">
+    </div>
+    <div class="info">
+      <h2>Jupiter — Giant Among Giants</h2>
+      <h3>Quick Stats</h3>
+      <div class="stats">
+        <span>Mean Radius: 69,911 km</span>
+        <span>Mass: 1.898 × 10²⁷ kg</span>
+        <span>Orbital Period: 11.86 Earth years</span>
+        <span>Rotation Period: ~9.93 hours</span>
+        <span>Axial Tilt: 3.13°</span>
+        <span>Distance: ~778.5M km from Sun</span>
+      </div>
+      <h3>Atmosphere</h3>
+      <ul>
+        <li>Mainly hydrogen (90%) and helium (10%)</li>
+        <li>Storm systems: including the Great Red Spot (a centuries-old anticyclone)</li>
+        <li>Color bands from chemical composition and high-speed winds</li>
+      </ul>
+      <h3>Interior</h3>
+      <ul>
+        <li>Possibly has a dense core of rock and metal</li>
+        <li>Liquid metallic hydrogen layer creates strong magnetic field</li>
+        <li>Immense internal pressure and heat</li>
+      </ul>
+      <h3>Moons & Rings</h3>
+      <ul>
+        <li>At least 95 known moons — including the Galilean moons: Io, Europa, Ganymede, Callisto</li>
+        <li>Thin ring system made of dust particles</li>
+      </ul>
+      <h3>Exploration</h3>
+      <ul>
+        <li>Pioneer 10, Voyager 1 & 2, Galileo Orbiter, Juno (currently orbiting)</li>
+        <li>JUICE mission by ESA aims to explore Ganymede, Callisto, and Europa</li>
+      </ul>
+      <h3>Fun Fact</h3>
+      <p>Jupiter is so massive, it doesn’t orbit the Sun directly—it orbits a point just outside the Sun’s surface (barycenter).</p>
+      <button class="back-btn" onclick="history.back()">🔙 Return to Mission Control</button>
+    </div>
+  </main>
+   <script>
+    // Make nav horizontal and above .planet-hero
+    document.querySelector('.nav').style.position = 'static';
+    document.querySelector('.nav').style.flexDirection = 'row';
+    document.querySelector('.nav').style.justifyContent = 'center';
+    document.querySelector('.nav').style.alignItems = 'center';
+    document.querySelector('.nav').style.gap = '1.2rem';
+    document.querySelector('.nav').style.margin = '2rem 0 1.5rem 0';
+
+    // Add a home link to the nav
+    const homeLink = document.createElement('a');
+  </script>
+  <script>
+  const links = document.querySelectorAll('.planet-links a');
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const destination = this.href;
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 700); // match transition duration
+    });
+  });
+</script>
+
+  </div>
+</body>
+</html>

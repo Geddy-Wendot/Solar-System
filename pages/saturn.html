@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Ascension | Saturn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --saturn-gold: #e5c07b;
+      --glass: rgba(255,255,255,0.06);
+    }
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 1.5rem 2rem;
+      background: linear-gradient(90deg, rgba(0,0,0,.8), rgba(255,255,255,.05));
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--saturn-gold);
+      text-shadow: 0 0 20px var(--saturn-gold);
+    }
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .planet-hero {
+      display: inline-block;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px var(--saturn-gold);
+      animation: float 14s ease-in-out infinite;
+    }
+    .planet-hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: inherit;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .info {
+      padding: 2rem 2.5rem;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      overflow: auto;
+    }
+    .info h2 {
+      color: var(--saturn-gold);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px var(--saturn-gold);
+    }
+    .info h3 {
+      color: var(--saturn-gold);
+      margin-top: 1.5rem;
+    }
+    .info p, .info li {
+      margin: .6rem 0;
+      line-height: 1.55;
+      font-size: 1rem;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin: .5rem 0;
+    }
+    .stats span {
+      padding: .4rem .8rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,.09);
+      font-size: .85rem;
+      backdrop-filter: blur(6px);
+    }
+    .nav {
+      position: fixed;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .nav a {
+      padding: .5rem .9rem;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #fff;
+      text-decoration: none;
+      font-size: .8rem;
+      backdrop-filter: blur(10px);
+      transition: .25s;
+    }
+    .nav a:hover {
+      background: var(--saturn-gold);
+      box-shadow: 0 0 10px var(--saturn-gold);
+    }
+    .back-btn {
+      margin: 2rem auto 0;
+      display: inline-block;
+      padding: .9rem 1.6rem;
+      font-size: 1rem;
+      background: linear-gradient(45deg, var(--saturn-gold), #fff9c4);
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--saturn-gold);
+      transition: transform .3s;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+    .info::-webkit-scrollbar { width: 8px; }
+    .info::-webkit-scrollbar-thumb { background: var(--saturn-gold); border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="sun.html">☀️ Sun</a>
+    <a href="mercury.html">☿ Mercury</a>
+    <a href="venus.html">♀ Venus</a>
+    <a href="earth.html">🌍 Earth</a>
+    <a href="mars.html">♂ Mars</a>
+    <a href="jupiter.html">♃ Jupiter</a>
+    <a href="saturn.html" style="background:var(--saturn-gold)">♄ Saturn</a>
+    <a href="uranus.html">♅ Uranus</a>
+    <a href="neptune.html">♆ Neptune</a>
+    <a href="beyond.html">🌌 Beyond Neptune</a>
+  </nav>
+  <header><h1>♄ SATURN</h1></header>
+  <main>
+    <div class="planet-hero">
+      <img src="../assets/images/saturn.jpeg" alt="Image of Saturn">
+    </div>
+    <div class="info">
+      <h2>Saturn — Lord of the Rings</h2>
+      <h3>Quick Stats</h3>
+      <div class="stats">
+        <span>Mean Radius: 58,232 km</span>
+        <span>Mass: 5.683 × 10²⁶ kg</span>
+        <span>Orbital Period: 29.45 Earth years</span>
+        <span>Rotation Period: ~10.7 hours</span>
+        <span>Axial Tilt: 26.7°</span>
+        <span>Distance: ~1.43B km from Sun</span>
+      </div>
+      <h3>Atmosphere</h3>
+      <ul>
+        <li>Composed mostly of hydrogen and helium</li>
+        <li>Banding and long-lived storms, like the hexagon at the north pole</li>
+        <li>Winds up to 1,800 km/h — among the fastest in the Solar System</li>
+      </ul>
+      <h3>Interior</h3>
+      <ul>
+        <li>Small rocky core surrounded by metallic hydrogen</li>
+        <li>Liquid hydrogen and helium layers</li>
+        <li>Possibly rains helium deep inside</li>
+      </ul>
+      <h3>Rings & Moons</h3>
+      <ul>
+        <li>Iconic rings made of ice particles and rocky debris</li>
+        <li>Over 140 known moons — Titan is the largest, with a thick atmosphere</li>
+        <li>Enceladus: Emits water-rich plumes, potential subsurface ocean</li>
+      </ul>
+      <h3>Exploration</h3>
+      <ul>
+        <li>Pioneer 11, Voyager 1 & 2, Cassini-Huygens mission</li>
+        <li>Cassini orbited Saturn for 13 years, ending in 2017 with a dramatic plunge</li>
+      </ul>
+      <h3>Fun Fact</h3>
+      <p>Despite its size, Saturn is the least dense planet—it would float in water (if you could find a bathtub that big).</p>
+      <button class="back-btn" onclick="history.back()">🔙 Return to Mission Control</button>
+    </div>
+  </main>
+   <script>
+    // Make nav horizontal and above .planet-hero
+    document.querySelector('.nav').style.position = 'static';
+    document.querySelector('.nav').style.flexDirection = 'row';
+    document.querySelector('.nav').style.justifyContent = 'center';
+    document.querySelector('.nav').style.alignItems = 'center';
+    document.querySelector('.nav').style.gap = '1.2rem';
+    document.querySelector('.nav').style.margin = '2rem 0 1.5rem 0';
+
+    // Add a home link to the nav
+    const homeLink = document.createElement('a');
+  </script>
+</body>
+
+</html>

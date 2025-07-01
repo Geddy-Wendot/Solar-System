@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Ascension | Mercury</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --mercury-gray: #d1d1d1;
+      --glass: rgba(255,255,255,0.06);
+    }
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 1.5rem 2rem;
+      background: linear-gradient(90deg, rgba(0,0,0,.8), rgba(255,255,255,.05));
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--mercury-gray);
+      text-shadow: 0 0 20px var(--mercury-gray);
+    }
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .planet-hero {
+      display: inline-block;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px var(--mercury-gray);
+      animation: float 14s ease-in-out infinite;
+    }
+    .planet-hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: inherit;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .info {
+      padding: 2rem 2.5rem;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      overflow: auto;
+    }
+    .info h2 {
+      color: var(--mercury-gray);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px var(--mercury-gray);
+    }
+    .info h3 {
+      color: var(--mercury-gray);
+      margin-top: 1.5rem;
+    }
+    .info p, .info li {
+      margin: .6rem 0;
+      line-height: 1.55;
+      font-size: 1rem;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin: .5rem 0;
+    }
+    .stats span {
+      padding: .4rem .8rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,.09);
+      font-size: .85rem;
+      backdrop-filter: blur(6px);
+    }
+    .nav {
+      position: fixed;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .nav a {
+      padding: .5rem .9rem;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #fff;
+      text-decoration: none;
+      font-size: .8rem;
+      backdrop-filter: blur(10px);
+      transition: .25s;
+    }
+    .nav a:hover {
+      background: var(--mercury-gray);
+      box-shadow: 0 0 10px var(--mercury-gray);
+    }
+    .back-btn {
+      margin: 2rem auto 0;
+      display: inline-block;
+      padding: .9rem 1.6rem;
+      font-size: 1rem;
+      background: linear-gradient(45deg, var(--mercury-gray), #aaa);
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--mercury-gray);
+      transition: transform .3s;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+    .info::-webkit-scrollbar { width: 8px; }
+    .info::-webkit-scrollbar-thumb { background: var(--mercury-gray); border-radius: 10px; }
+    #page {
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+body.fade-out #page {
+  opacity: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div id="page">
+  <nav class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="sun.html">☀️ Sun</a>
+    <a href="mercury.html" style="background:var(--mercury-gray)">☿ Mercury</a>
+    <a href="venus.html">♀ Venus</a>
+    <a href="earth.html">🌍 Earth</a>
+    <a href="mars.html">♂ Mars</a>
+    <a href="jupiter.html">♃ Jupiter</a>
+    <a href="saturn.html">♄ Saturn</a>
+    <a href="uranus.html">♅ Uranus</a>
+    <a href="neptune.html">♆ Neptune</a>
+    <a href="beyond.html">🌌 Beyond Neptune</a>
+  </nav>
+  <header><h1>☿ MERCURY</h1></header>
+  <main>
+    <div class="planet-hero">
+      <img src="../assets/images/Smithsonian Planetary Image Facility.jpeg" alt="Image of Mercury">
+    </div>
+    <div class="info">
+      <h2>Mercury — Raw and Relentless</h2>
+      <p><strong>Name Origin:</strong> Named after the Roman messenger god Mercurius (Greek: Hermes) for its rapid motion across the sky. Symbol: ☿</p>
+      <h3>Orbital Behavior</h3>
+      <p>Mercury is the closest planet to the Sun, locked in a 3:2 spin-orbit resonance, meaning it rotates three times every two orbits.</p>
+      <div class="stats">
+        <span>Orbital Period: 88 days</span>
+        <span>Rotation: 58.6 days</span>
+        <span>Solar Day: 176 Earth days</span>
+        <span>Distance: 46M–70M km from Sun</span>
+        <span>Speed: 47.36 km/s</span>
+      </div>
+      <h3>Physical Stats</h3>
+      <p>Mercury is the smallest planet in the Solar System with a huge iron core that makes it one of the densest. Its surface is heavily cratered like the Moon’s, but with volcanic plains and giant scarps.</p>
+      <div class="stats">
+        <span>Diameter: 4,879.4 km</span>
+        <span>Mass: 3.3 × 10²³ kg</span>
+        <span>Gravity: 3.7 m/s²</span>
+        <span>Temp: −173 °C to 427 °C</span>
+        <span>Albedo: 0.068</span>
+      </div>
+      <h3>Internal Structure</h3>
+      <ul>
+        <li>Core: ~2,000 km radius, mostly iron (with nickel, sulfur)</li>
+        <li>Layers: Molten outer core, solid inner core, 400–500 km mantle, 35–70 km crust</li>
+        <li>Tectonics: Lobate scarps (e.g., Discovery Rupes) show global shrinkage</li>
+      </ul>
+      <h3>Surface Highlights</h3>
+      <ul>
+        <li><strong>Caloris Basin:</strong> 1,550 km-wide impact site</li>
+        <li><strong>Rembrandt Basin:</strong> ~716 km</li>
+        <li>Ghost craters, pyroclastic vents, strange bright "hollows"</li>
+      </ul>
+      <h3>Atmosphere & Exosphere</h3>
+      <p>Extremely thin exosphere, composed of trace elements like sodium, oxygen, hydrogen, helium, and potassium. Powered by solar wind, micrometeorites, and desorption processes.</p>
+      <p>Notable: Mercury has a 24M km-long sodium tail blown by the Sun.</p>
+      <h3>Magnetic Field</h3>
+      <p>Dipolar, offset north by 480 km. Powered by dynamo effect in a partially molten outer core. Creates a magnetotail and supports solar interactions like flux transfer events.</p>
+      <h3>Polar Ice & Shadows</h3>
+      <p>Crater floors near poles are permanently shadowed and below 100 K. Radar-bright signals and MESSENGER data suggest these craters contain <strong>water ice</strong>.</p>
+      <h3>Missions</h3>
+      <ul>
+        <li><strong>Mariner 10</strong> (1973–75): Detected magnetic field, mapped ~45%</li>
+        <li><strong>MESSENGER</strong> (2011–2015): Global imaging, surface chemistry, polar ice</li>
+        <li><strong>BepiColombo</strong> (2018–present): Due to orbit Mercury in 2026</li>
+      </ul>
+      <h3>Fun Physics & Mysteries</h3>
+      <ul>
+        <li>Relativity Testbed: Mercury's perihelion shift helped confirm Einstein’s General Relativity</li>
+        <li>Volatile Richness: Puzzling for a sun-scorched world — why so much sulfur?</li>
+        <li>Carbon and graphite layer: Suggests a unique planetary crust evolution</li>
+      </ul>
+      <h3>Cultural Lore</h3>
+      <p>Babylonians called it Nabu, Greeks once thought it was two stars — Apollo (morning) and Hermes (evening). The Mayans linked it to divine messengers.</p>
+      <button class="back-btn" onclick="history.back()">🔙 Return to Mission Control</button>
+    </div>
+  </main>
+   <script>
+    // Make nav horizontal and above .planet-hero
+    document.querySelector('.nav').style.position = 'static';
+    document.querySelector('.nav').style.flexDirection = 'row';
+    document.querySelector('.nav').style.justifyContent = 'center';
+    document.querySelector('.nav').style.alignItems = 'center';
+    document.querySelector('.nav').style.gap = '1.2rem';
+    document.querySelector('.nav').style.margin = '2rem 0 1.5rem 0';
+
+    // Add a home link to the nav
+    const homeLink = document.createElement('a');
+  </script>
+  <script>
+  const links = document.querySelectorAll('.planet-links a');
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const destination = this.href;
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 700); // match transition duration
+    });
+  });
+</script>
+
+  </div>
+</body>
+</html>

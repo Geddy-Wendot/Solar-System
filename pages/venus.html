@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Ascension | Venus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --venus-gold: #ffcc70;
+      --glass: rgba(255,255,255,0.06);
+    }
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 1.5rem 2rem;
+      background: linear-gradient(90deg, rgba(0,0,0,.8), rgba(255,255,255,.05));
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--venus-gold);
+      text-shadow: 0 0 20px var(--venus-gold);
+    }
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .planet-hero {
+      display: inline-block;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px var(--venus-gold);
+      animation: float 14s ease-in-out infinite;
+    }
+    .planet-hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: inherit;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .info {
+      padding: 2rem 2.5rem;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      overflow: auto;
+    }
+    .info h2 {
+      color: var(--venus-gold);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px var(--venus-gold);
+    }
+    .info h3 {
+      color: var(--venus-gold);
+      margin-top: 1.5rem;
+    }
+    .info p, .info li {
+      margin: .6rem 0;
+      line-height: 1.55;
+      font-size: 1rem;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin: .5rem 0;
+    }
+    .stats span {
+      padding: .4rem .8rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,.09);
+      font-size: .85rem;
+      backdrop-filter: blur(6px);
+    }
+    .nav {
+      position: fixed;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .nav a {
+      padding: .5rem .9rem;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #fff;
+      text-decoration: none;
+      font-size: .8rem;
+      backdrop-filter: blur(10px);
+      transition: .25s;
+    }
+    .nav a:hover {
+      background: var(--venus-gold);
+      box-shadow: 0 0 10px var(--venus-gold);
+    }
+    .back-btn {
+      margin: 2rem auto 0;
+      display: inline-block;
+      padding: .9rem 1.6rem;
+      font-size: 1rem;
+      background: linear-gradient(45deg, var(--venus-gold), #e0b55b);
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--venus-gold);
+      transition: transform .3s;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+    .info::-webkit-scrollbar { width: 8px; }
+    .info::-webkit-scrollbar-thumb { background: var(--venus-gold); border-radius: 10px; }
+    #page {
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+body.fade-out #page {
+  opacity: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div id="page">
+  <nav class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="sun.html">☀️ Sun</a>
+    <a href="mercury.html">☿ Mercury</a>
+    <a href="venus.html" style="background:var(--venus-gold)">♀ Venus</a>
+    <a href="earth.html">🌍 Earth</a>
+    <a href="mars.html">♂ Mars</a>
+    <a href="jupiter.html">♃ Jupiter</a>
+    <a href="saturn.html">♄ Saturn</a>
+    <a href="uranus.html">♅ Uranus</a>
+    <a href="neptune.html">♆ Neptune</a>
+    <a href="beyond.html">🌌 Beyond Neptune</a>
+  </nav>
+  <header><h1>♀ VENUS</h1></header>
+  <main>
+    <div class="planet-hero">
+      <img src="../assets/images/Radar images of the surface of Venus, beneath the clouds_.jpeg" alt="Image of Venus">
+    </div>
+    <div class="info">
+      <h2>Venus — The Pressure Cooker Planet</h2>
+      <h3>Orbit & Rotation</h3>
+      <div class="stats">
+        <span>Orbital Period: 224.7 days</span>
+        <span>Retrograde Rotation: −243 days</span>
+        <span>Solar Day: 116.75 Earth days</span>
+        <span>Axial Tilt: 177.4°</span>
+        <span>Distance: ~108M km from Sun</span>
+      </div>
+      <h3>Physical Structure</h3>
+      <ul>
+        <li>Radius: 6,051.8 km</li>
+        <li>Mass: 4.8675×10²⁴ kg</li>
+        <li>Core: 2,900–3,500 km, iron-nickel, possibly partly molten</li>
+        <li>Mantle: ~3,000 km thick; convection active</li>
+        <li>Crust: 10–65 km; tesserae may be felsic</li>
+      </ul>
+      <h3>Surface Geology</h3>
+      <ul>
+        <li>Volcanic plains: ~80% of surface</li>
+        <li>85,000+ volcanoes; 167 are over 100 km wide</li>
+        <li>Coronae and rift zones (e.g., Devana Chasma)</li>
+        <li>Pancake domes & tesserae</li>
+        <li>Possible recent volcanic activity (Maat Mons)</li>
+      </ul>
+      <h3>Atmosphere & Climate</h3>
+      <p>Extremely dense CO₂ atmosphere (~96.5%) with nitrogen and sulfur dioxide. Surface pressure ~92 bar. Clouds are thick sulfuric acid layers with UV absorbers. Temperatures hover around 464 °C constantly.</p>
+      <p>Atmosphere rotates much faster than the planet (~4 Earth days).</p>
+      <h3>Atmospheric Chemistry</h3>
+      <ul>
+        <li>Water vapor is scarce, <6%</li>
+        <li>D/H ratio ~1,500× Earth — major hydrogen loss</li>
+        <li>Trace phosphine and ammonia — debated biosignatures</li>
+      </ul>
+      <h3>Magnetism & Heat</h3>
+      <ul>
+        <li>No intrinsic magnetic field</li>
+        <li>Global heat flow ~11–14.5 TW</li>
+        <li>Stagnant-lid regime limits core convection</li>
+      </ul>
+      <h3>Exploration</h3>
+      <ul>
+        <li>Venera Landers (1975–1982): Basalt data, images</li>
+        <li>Magellan (1989–1993): Mapped 98% of surface</li>
+        <li>Venus Express (2006–2014): Detected volcanic SO₂ spikes</li>
+        <li>Akatsuki (2015–present): UV/IR cloud mapping</li>
+      </ul>
+      <h3>Upcoming Missions</h3>
+      <ul>
+        <li>DAVINCI+ (2031): Atmospheric probe</li>
+        <li>VERITAS (2031): Radar geology orbiter</li>
+        <li>EnVision (ESA, 2030s): Tectonics & volcanism</li>
+      </ul>
+      <h3>Mysteries & Significance</h3>
+      <ul>
+        <li>Crust recycling without plate tectonics?</li>
+        <li>Confirmation of volcanic activity</li>
+        <li>What absorbs UV in upper atmosphere?</li>
+        <li>Could clouds support microbial life?</li>
+        <li>Venus as an exoplanet model</li>
+      </ul>
+      <button class="back-btn" onclick="history.back()">🔙 Return to Mission Control</button>
+    </div>
+  </main>
+   <script>
+    // Make nav horizontal and above .planet-hero
+    document.querySelector('.nav').style.position = 'static';
+    document.querySelector('.nav').style.flexDirection = 'row';
+    document.querySelector('.nav').style.justifyContent = 'center';
+    document.querySelector('.nav').style.alignItems = 'center';
+    document.querySelector('.nav').style.gap = '1.2rem';
+    document.querySelector('.nav').style.margin = '2rem 0 1.5rem 0';
+
+    // Add a home link to the nav
+    const homeLink = document.createElement('a');
+  </script>
+  <script>
+  const links = document.querySelectorAll('.planet-links a');
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const destination = this.href;
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 700); // match transition duration
+    });
+  });
+</script>
+
+  </div>
+</body>
+</html>

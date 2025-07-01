@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Ascension | The Sun</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sun-gold:#ffbe40;
+      --sun-orange:#ff7b00;
+      --glass:rgba(255,255,255,0.06);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Orbitron',sans-serif;background:#000;color:#fff;min-height:100vh;display:flex;flex-direction:column}
+    header{padding:1.5rem 2rem;background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(255,255,255,.05));backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1);text-align:center}
+    header h1{font-size:2.8rem;color:var(--sun-gold);text-shadow:0 0 20px var(--sun-orange)}
+    main{flex:1;display:grid;grid-template-columns:1fr 2fr;gap:2rem;padding:2rem}
+    .sun-hero{display:inline-block;border-radius:20px;overflow:hidden;box-shadow:0 0 40px var(--sun-orange);animation:float 14s ease-in-out infinite}
+    .sun-hero img{display:block;width:100%;height:auto;border-radius:inherit}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    .info{padding:2rem 2.5rem;background:var(--glass);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(20px);border-radius:20px;overflow:auto}
+    .info h2{color:var(--sun-gold);margin-bottom:1rem;text-shadow:0 0 10px var(--sun-gold)}
+    .info h3{color:var(--sun-orange);margin-top:1.5rem}
+    .info p, .info li{margin:.6rem 0;line-height:1.55;font-size:1rem}
+    .stats{display:flex;flex-wrap:wrap;gap:.6rem;margin:.5rem 0}
+    .stats span{padding:.4rem .8rem;border-radius:12px;background:rgba(255,255,255,.09);font-size:.85rem;backdrop-filter:blur(6px)}
+    .nav{position:fixed;left:1rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:.6rem}
+    .nav a{padding:.5rem .9rem;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,.1);color:#fff;text-decoration:none;font-size:.8rem;backdrop-filter:blur(10px);transition:.25s}
+    .nav a:hover{background:var(--sun-orange);box-shadow:0 0 10px var(--sun-orange)}
+    .back-btn{margin:2rem auto 0;display:inline-block;padding:.9rem 1.6rem;font-size:1rem;background:linear-gradient(45deg,var(--sun-gold),var(--sun-orange));color:#000;border:none;border-radius:30px;cursor:pointer;box-shadow:0 0 15px var(--sun-orange);transition:transform .3s}
+    .back-btn:hover{transform:scale(1.05)}
+    .info::-webkit-scrollbar{width:8px}
+    .info::-webkit-scrollbar-thumb{background:var(--sun-orange);border-radius:10px}
+    #page {
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+body.fade-out #page {
+  opacity: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div id="page">
+  <nav class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="sun.html" style="background:var(--sun-orange)">☀️ Sun</a>
+    <a href="mercury.html">☿ Mercury</a>
+    <a href="venus.html">♀ Venus</a>
+    <a href="earth.html">🌍 Earth</a>
+    <a href="mars.html">♂ Mars</a>
+    <a href="jupiter.html">♃ Jupiter</a>
+    <a href="saturn.html">♄ Saturn</a>
+    <a href="uranus.html">♅ Uranus</a>
+    <a href="neptune.html">♆ Neptune</a>
+    <a href="beyond.html">🌌 Beyond Neptune</a>
+  </nav>
+  <header><h1>🌞 THE SUN</h1></header>
+  <main>
+    <div class="sun-hero"><img src="../assets/images/download.gif" alt="Animated Sun"></div>
+    <div class="info">
+      <h2>🌞 EVERYTHING KNOWN ABOUT THE SUN — UNABRIDGED</h2>
+
+      <!-- 1 IDENTITY -->
+      <h3>1. Identity & Classification</h3>
+      <p><strong>Names:</strong> Sun • Sol (Latin) • Helios (Greek).</p>
+      <p><strong>Stellar Class:</strong> G2V main‑sequence star — yellowish surface, hydrogen‑fusing core.</p>
+      <p><strong>Galactic Address:</strong> Orion Arm (Orion Spur) of the Milky Way.</p>
+      <p><strong>Age:</strong> 4.603 ± 0.04 billion years — halfway through main‑sequence lifespan.</p>
+
+      <!-- 2 PHYSICAL DIMENSIONS -->
+      <h3>2. Physical Dimensions</h3>
+      <div class="stats">
+        <span>Mass 1.988 × 10³⁰ kg (333 000 × Earth)</span>
+        <span>Radius 696 340 km</span>
+        <span>Diameter 1.3927 million km (109 × Earth)</span>
+        <span>Volume 1.412 × 10¹⁸ km³</span>
+        <span>Mean Density 1.408 g/cm³</span>
+      </div>
+
+      <!-- 3 COMPOSITION -->
+      <h3>3. Composition</h3>
+      <p><u>Core (mass fraction):</u> H 34.6 % • He 63.4 % • Metals 2 % (C, O, Ne, Fe…)</p>
+      <p><u>Photosphere:</u> H 74.9 % • He 23.8 % • Metals 1.3 %.</p>
+
+      <!-- 4 INTERNAL STRUCTURE -->
+      <h3>4. Internal Structure</h3>
+      <ul>
+        <li><strong>Core</strong> (r ≤ 150 000 km) — 15 million °C; proton‑proton fusion produces 3.8 × 10²⁶ W.</li>
+        <li><strong>Radiative Zone</strong> (0.15–0.70 R☉) — photons random‑walk for up to 170 000 years.</li>
+        <li><strong>Convective Zone</strong> (0.70–1 R☉) — rising plasma granules 1000 km wide.</li>
+      </ul>
+
+      <!-- 5 ATMOSPHERIC LAYERS -->
+      <h3>5. Atmospheric Layers</h3>
+      <ul>
+        <li><strong>Photosphere</strong> ~5 772 K; sunspots ≈ 3 700 K.</li>
+        <li><strong>Chromosphere</strong> 4 500 → 20 000 °C; spicules rocket upward.</li>
+        <li><strong>Corona</strong> ≥ 1 million °C; mystery heating, visible in eclipses.</li>
+      </ul>
+
+      <!-- 6 MAGNETIC & ACTIVITY -->
+      <h3>6. Magnetic Field & Solar Activity</h3>
+      <p>11‑year cycle of sunspot minima/maxima; poles flip each cycle. Flares, prominences and CMEs can hurl 10¹⁶ g plasma at 1000 km/s.</p>
+
+      <!-- 7 ROTATION & GALACTIC MOTION -->
+      <h3>7. Rotation & Motion</h3>
+      <p>Equator rotates in 24.47 days, poles ~35 days. Orbits the Milky Way in ~230 million years at 828 000 km/h.</p>
+
+      <!-- 8 ENERGY OUTPUT -->
+      <h3>8. Energy Output & Radiation</h3>
+      <p>Luminosity 3.828 × 10²⁶ W (≈1 trillion megaton bombs/s). Solar constant at Earth = 1 361 W/m².</p>
+
+      <!-- 9 NEUTRINOS -->
+      <h3>9. Neutrinos</h3>
+      <p>~6 × 10¹⁰ cm⁻² s⁻¹ pass through you. Detection confirms core fusion; B‑8 branch delivers up‑to‑15 MeV neutrinos.</p>
+
+      <!-- 10 FUTURE EVOLUTION -->
+      <h3>10. Future Evolution</h3>
+      <ul>
+        <li>Red Giant in 5 Ga ➜ radius ≈ 1 AU.</li>
+        <li>Helium flash; He→C/O fusion.</li>
+        <li>Planetary nebula shell ejection.</li>
+        <li>White dwarf ➜ eventual black dwarf (trillions of yrs).</li>
+      </ul>
+
+      <!-- 11 MISSIONS -->
+      <h3>11. Spacecraft & Studies</h3>
+      <ul>
+        <li><strong>SOHO</strong> 1995–present.</li>
+        <li><strong>SDO</strong> Solar Dynamics Observatory 2010–present.</li>
+        <li><strong>Parker Solar Probe</strong> 2018–present.</li>
+        <li><strong>Solar Orbiter</strong> 2020–present.</li>
+      </ul>
+
+      <!-- 12 CULTURE -->
+      <h3>12. Culture, History & Symbolism</h3>
+      <p>Ra • Helios • Surya • Amaterasu • Inti — civilizations worshipped solar deities; solar calendars anchor timekeeping.</p>
+
+      <!-- 13–25 ADVANCED SCIENCE COLLAPSIBLE -->
+      <details>
+        <summary><strong>13–25 Advanced Solar Science (click to expand)</strong></summary>
+        <h3>13. Core Fusion (pp‑chain)</h3>
+        <p>pp‑I, II, III branches; energy 26.2 MeV/reaction; neutrino spectrum lines Be‑7, B‑8.</p>
+        <h3>14. Photon Transport Random Walk</h3>
+        <p>~10²¹ scatterings; radiative diffusion equation F = −(c/3κρ)∂u/∂r.</p>
+        <h3>15–17. Dynamo, Helioseismology, Coronal Heating</h3>
+        <p>Alpha‑Omega dynamo; p‑, g‑, f‑modes constrain interior; nanoflares & Alfvén waves heat corona.</p>
+        <h3>18. CME Metrics</h3>
+        <p>Mass 10¹⁶ g; energy 10²⁵ J.</p>
+        <h3>19. Solar Wind & Heliosphere</h3>
+        <p>Parker spiral, termination shock at 80–100 AU, heliopause ~120 AU.</p>
+        <h3>20–24. Granules, Metallurgy, Tides...</h3>
+        <p>Granule 1 Mm, supergranule 30 Mm; metallicity Z ≈ 0.0122; faint young Sun paradox.</p>
+      </details>
+
+      <button class="back-btn" onclick="history.back()">🔙 Return to Mission Control</button>
+    </div>
+  </main>
+   <script>
+    // Make nav horizontal and above .planet-hero
+    document.querySelector('.nav').style.position = 'static';
+    document.querySelector('.nav').style.flexDirection = 'row';
+    document.querySelector('.nav').style.justifyContent = 'center';
+    document.querySelector('.nav').style.alignItems = 'center';
+    document.querySelector('.nav').style.gap = '1.2rem';
+    document.querySelector('.nav').style.margin = '2rem 0 1.5rem 0';
+
+    // Add a home link to the nav
+    const homeLink = document.createElement('a');
+  </script>
+  <script>
+  const links = document.querySelectorAll('.planet-links a');
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const destination = this.href;
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 700); // match transition duration
+    });
+  });
+</script>
+
+  </div>
+</body>
+</html>
+

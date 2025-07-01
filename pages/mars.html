@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Ascension | Mars</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --mars-red: #ff4500;
+      --glass: rgba(255,255,255,0.06);
+    }
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 1.5rem 2rem;
+      background: linear-gradient(90deg, rgba(0,0,0,.8), rgba(255,255,255,.05));
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--mars-red);
+      text-shadow: 0 0 20px var(--mars-red);
+    }
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .planet-hero {
+      display: inline-block;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px var(--mars-red);
+      animation: float 14s ease-in-out infinite;
+    }
+    .planet-hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: inherit;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .info {
+      padding: 2rem 2.5rem;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      overflow: auto;
+    }
+    .info h2 {
+      color: var(--mars-red);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px var(--mars-red);
+    }
+    .info h3 {
+      color: var(--mars-red);
+      margin-top: 1.5rem;
+    }
+    .info p, .info li {
+      margin: .6rem 0;
+      line-height: 1.55;
+      font-size: 1rem;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin: .5rem 0;
+    }
+    .stats span {
+      padding: .4rem .8rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,.09);
+      font-size: .85rem;
+      backdrop-filter: blur(6px);
+    }
+    .nav {
+      position: fixed;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .nav a {
+      padding: .5rem .9rem;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #fff;
+      text-decoration: none;
+      font-size: .8rem;
+      backdrop-filter: blur(10px);
+      transition: .25s;
+    }
+    .nav a:hover {
+      background: var(--mars-red);
+      box-shadow: 0 0 10px var(--mars-red);
+    }
+    .back-btn {
+      margin: 2rem auto 0;
+      display: inline-block;
+      padding: .9rem 1.6rem;
+      font-size: 1rem;
+      background: linear-gradient(45deg, var(--mars-red), #ff6a00);
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--mars-red);
+      transition: transform .3s;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+    .info::-webkit-scrollbar { width: 8px; }
+    .info::-webkit-scrollbar-thumb { background: var(--mars-red); border-radius: 10px; }
+
+    #page {
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+body.fade-out #page {
+  opacity: 0;
+}
+
+  </style>
+</head>
+<body>
+    <div id="page">
+  <nav class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="sun.html">☀️ Sun</a>
+    <a href="mercury.html">☿ Mercury</a>
+    <a href="venus.html">♀ Venus</a>
+    <a href="earth.html">🌍 Earth</a>
+    <a href="mars.html" style="background:var(--mars-red)">♂ Mars</a>
+    <a href="jupiter.html">♃ Jupiter</a>
+    <a href="saturn.html">♄ Saturn</a>
+    <a href="uranus.html">♅ Uranus</a>
+    <a href="neptune.html">♆ Neptune</a>
+    <a href="beyond.html">🌌 Beyond Neptune</a>
+  </nav>
+  <header><h1>♂ MARS</h1></header>
+  <main>
+    <div class="planet-hero">
+      <img src="../assets/images/mars.jpeg" alt="Image of Mars">
+    </div>
+    <div class="info">
+      <h2>Mars — The Red Frontier</h2>
+      <h3>Overview</h3>
+      <div class="stats">
+        <span>Mean Radius: 3,389.5 km</span>
+        <span>Mass: 6.417 × 10²³ kg</span>
+        <span>Orbital Period: 687 Earth days</span>
+        <span>Solar Day: 24.6 hours</span>
+        <span>Axial Tilt: 25.19°</span>
+        <span>Distance: ~227.9M km from Sun</span>
+      </div>
+      <h3>Atmosphere</h3>
+      <ul>
+        <li>Mostly CO₂ (~95.3%), N₂ (2.7%), Ar (1.6%)</li>
+        <li>Pressure: ~0.6% of Earth's</li>
+        <li>Frequent dust storms, including planet-wide events</li>
+      </ul>
+      <h3>Surface</h3>
+      <ul>
+        <li>Home to Olympus Mons (tallest volcano) and Valles Marineris (largest canyon)</li>
+        <li>Polar ice caps of CO₂ and water ice</li>
+        <li>Signs of ancient riverbeds, delta formations</li>
+      </ul>
+      <h3>Moons</h3>
+      <ul>
+        <li>Two small moons: Phobos and Deimos</li>
+        <li>Likely captured asteroids</li>
+      </ul>
+      <h3>Exploration</h3>
+      <ul>
+        <li>Numerous orbiters, landers, and rovers: Viking, Pathfinder, Spirit, Opportunity, Curiosity, Perseverance</li>
+        <li>Ingenuity helicopter demonstrated powered flight</li>
+        <li>ESA's ExoMars mission aims to search for past life</li>
+      </ul>
+      <h3>Future Prospects</h3>
+      <p>Mars is a prime target for human colonization due to its day length and presence of frozen water. Research continues on terraforming possibilities and long-term habitation.</p>
+      <button class="back-btn" onclick="history.back()">🔙 Return to Mission Control</button>
+    </div>
+  </main>
+   <script>
+    // Make nav horizontal and above .planet-hero
+    document.querySelector('.nav').style.position = 'static';
+    document.querySelector('.nav').style.flexDirection = 'row';
+    document.querySelector('.nav').style.justifyContent = 'center';
+    document.querySelector('.nav').style.alignItems = 'center';
+    document.querySelector('.nav').style.gap = '1.2rem';
+    document.querySelector('.nav').style.margin = '2rem 0 1.5rem 0';
+
+    // Add a home link to the nav
+    const homeLink = document.createElement('a');
+  </script>
+  <script>
+  const links = document.querySelectorAll('.planet-links a');
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const destination = this.href;
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 700); // match transition duration
+    });
+  });
+</script>
+
+  </div>
+</body>
+</html>

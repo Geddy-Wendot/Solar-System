@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Ascension | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #00f7ff;
+      --glass: rgba(0, 255, 255, 0.07);
+      --glow: 0 0 15px var(--accent), 0 0 30px var(--accent), 0 0 60px #00ffff55;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at bottom left, #1b2735, #0a0a23),
+                  linear-gradient(135deg, #120458, #341671, #4f2d91, #674aa6, #846dbd);
+      background-blend-mode: screen;
+      color: #e0f7ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 4rem;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: radial-gradient(circle, rgba(0,255,255,0.1), rgba(0,0,0,0.25));
+      border-bottom: 2px solid rgba(0,255,255,0.15);
+      position: relative;
+    }
+    header h1 {
+      font-size: 3.75rem;
+      color: var(--accent);
+      text-shadow: var(--glow);
+      animation: neonPulse 4s ease-in-out infinite;
+    }
+    @keyframes neonPulse {
+      0%, 100% { text-shadow: var(--glow); }
+      50% { text-shadow: 0 0 25px #fff, 0 0 50px var(--accent); }
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      animation: slideIn 1.2s ease-out;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .section {
+      margin-bottom: 3rem;
+      background: var(--glass);
+      border: 1px solid rgba(0,255,255,0.15);
+      border-radius: 25px;
+      padding: 2rem;
+      backdrop-filter: blur(25px);
+      box-shadow: 0 0 25px rgba(0,255,255,0.08);
+      transition: transform 0.5s ease;
+    }
+    .section:hover {
+      transform: scale(1.01);
+    }
+    .section h2 {
+      color: var(--accent);
+      font-size: 2rem;
+      text-shadow: 0 0 16px var(--accent);
+      margin-bottom: 1rem;
+    }
+    .section p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #c4f4ff;
+    }
+    .planet-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+    .planet-links a {
+      padding: 1rem;
+      border-radius: 20px;
+      background: var(--glass);
+      border: 1px solid rgba(0,255,255,0.1);
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1rem;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(12px);
+      position: relative;
+    }
+    .planet-links a::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: 0 0 12px var(--accent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .planet-links a:hover {
+      background: var(--accent);
+      color: #000;
+      transform: scale(1.1);
+    }
+    .planet-links a:hover::after {
+      opacity: 1;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #77aabb;
+      padding: 2.5rem 1rem;
+      background: rgba(0,255,255,0.03);
+      border-top: 1px solid rgba(0,255,255,0.1);
+      animation: fadeIn 2s ease-in;
+    }
+    #starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: url('https://i.imgur.com/wfVFK1V.jpg') center/cover no-repeat;
+      animation: fadeIn 2s ease-in-out;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div id="starfield"></div>
+  <header>
+    <h1> Solar Ascension</h1>
+  </header>
+  <main>
+    <div class="section">
+      <h2> Initiating Deep Space Link</h2>
+      <p>
+        Welcome to the Solar Ascension Hub — not just a site, but your portal to planetary legends,<br>
+        nuclear furnaces, icy giants, volcanic dreams, and celestial enigmas.<br><br>
+        Choose your world, spark your curiosity, and ride the light.
+      </p>
+    </div>
+    <div class="section">
+      <h2> Choose Your Destination</h2>
+      <div class="planet-links">
+        <a href="../pages/sun.html">☀️ Sun</a>
+        <a href="../pages/mercury.html">☿ Mercury</a>
+        <a href="../pages/venus.html">♀ Venus</a>
+        <a href="../pages/earth.html">🌍 Earth</a>
+        <a href="../pages/mars.html">♂ Mars</a>
+        <a href="../pages/jupiter.html">♃ Jupiter</a>
+        <a href="../pages/saturn.html">♄ Saturn</a>
+        <a href="../pages/uranus.html">⛢ Uranus</a>
+        <a href="../pages/neptune.html">♆ Neptune</a>
+        <a href="../pages/beyond.html">🌌 Beyond</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Solar Ascension Project — Coded from stardust by Geddy Wendot ✨
+  </footer>
+  <script>
+    const links = document.querySelectorAll('.planet-links a');
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = this.href;
+        document.body.style.transition = 'opacity 0.7s ease';
+        document.body.style.opacity = 0;
+        setTimeout(() => {
+          window.location.href = target;
+        }, 700);
+      });
+    });
+  </script>
+</body>
+</html>

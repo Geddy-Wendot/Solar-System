@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Ascension | Earth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --earth-blue: #00aaff;
+      --glass: rgba(255,255,255,0.06);
+    }
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 1.5rem 2rem;
+      background: linear-gradient(90deg, rgba(0,0,0,.8), rgba(255,255,255,.05));
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--earth-blue);
+      text-shadow: 0 0 20px var(--earth-blue);
+    }
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .planet-hero {
+      display: inline-block;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px var(--earth-blue);
+      animation: float 14s ease-in-out infinite;
+    }
+    .planet-hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: inherit;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .info {
+      padding: 2rem 2.5rem;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      overflow: auto;
+    }
+    .info h2 {
+      color: var(--earth-blue);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px var(--earth-blue);
+    }
+    .info h3 {
+      color: var(--earth-blue);
+      margin-top: 1.5rem;
+    }
+    .info p, .info li {
+      margin: .6rem 0;
+      line-height: 1.55;
+      font-size: 1rem;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin: .5rem 0;
+    }
+    .stats span {
+      padding: .4rem .8rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,.09);
+      font-size: .85rem;
+      backdrop-filter: blur(6px);
+    }
+    .nav {
+      position: fixed;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .nav a {
+      padding: .5rem .9rem;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #fff;
+      text-decoration: none;
+      font-size: .8rem;
+      backdrop-filter: blur(10px);
+      transition: .25s;
+    }
+    .nav a:hover {
+      background: var(--earth-blue);
+      box-shadow: 0 0 10px var(--earth-blue);
+    }
+    .back-btn {
+      margin: 2rem auto 0;
+      display: inline-block;
+      padding: .9rem 1.6rem;
+      font-size: 1rem;
+      background: linear-gradient(45deg, var(--earth-blue), #007acc);
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--earth-blue);
+      transition: transform .3s;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+    .info::-webkit-scrollbar { width: 8px; }
+    .info::-webkit-scrollbar-thumb { background: var(--earth-blue); border-radius: 10px; }
+    #page {
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+body.fade-out #page {
+  opacity: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div id="page">
+  <nav class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="sun.html">☀️ Sun</a>
+    <a href="mercury.html">☿ Mercury</a>
+    <a href="venus.html">♀ Venus</a>
+    <a href="earth.html" style="background:var(--earth-blue)">🌍 Earth</a>
+    <a href="mars.html">♂ Mars</a>
+    <a href="jupiter.html">♃ Jupiter</a>
+    <a href="saturn.html">♄ Saturn</a>
+    <a href="uranus.html">⛢ Uranus</a>
+    <a href="neptune.html">♆ Neptune</a>
+    <a href="beyond.html">🌌 Beyond Neptune</a
+      <a href="beyond.html" style="background:var(--beyond)">🌌 Beyond Neptune</a>
+  </nav>
+  <header><h1>🌍 EARTH</h1></header>
+  <main>
+    <div class="planet-hero">
+      <img src="../assets/images/Song_ _The Night We Met_ Lord Huron.jpeg" alt="Image of Earth">
+    </div>
+    <div class="info">
+      <h2>Earth — Our Pale Blue Dot</h2>
+      <h3>Overview</h3>
+      <div class="stats">
+        <span>Mean Radius: 6,371 km</span>
+        <span>Mass: 5.972 × 10²⁴ kg</span>
+        <span>Orbital Period: 365.25 days</span>
+        <span>Rotation: 23.93 hours</span>
+        <span>Axial Tilt: 23.44°</span>
+        <span>Distance: ~149.6M km from Sun</span>
+      </div>
+      <h3>Atmosphere</h3>
+      <ul>
+        <li>78% Nitrogen, 21% Oxygen, 1% Argon/others</li>
+        <li>Weather systems driven by solar heating and rotation</li>
+        <li>Ozone layer absorbs harmful UV radiation</li>
+      </ul>
+      <h3>Surface</h3>
+      <ul>
+        <li>70% covered in liquid water</li>
+        <li>Diverse landscapes: mountains, plains, deserts, polar ice</li>
+        <li>Dynamic tectonics: earthquakes, volcanoes, plate movement</li>
+      </ul>
+      <h3>Magnetic Field</h3>
+      <p>Generated by the motion of molten iron in the outer core. Protects Earth from solar and cosmic radiation.</p>
+      <h3>Life & Biosphere</h3>
+      <ul>
+        <li>Only known planet with life</li>
+        <li>Biosphere stretches from deep ocean trenches to upper atmosphere</li>
+        <li>Carbon, nitrogen, and water cycles sustain ecosystems</li>
+      </ul>
+      <h3>Exploration & Satellites</h3>
+      <ul>
+        <li>Over 8,000 satellites launched</li>
+        <li>Earth-observing satellites monitor weather, climate, land, oceans</li>
+        <li>International Space Station orbits ~400 km above Earth</li>
+      </ul>
+      <button class="back-btn" onclick="history.back()">🔙 Return to Mission Control</button>
+    </div>
+  </main>
+  <script>
+    // Make nav horizontal and above .planet-hero
+    document.querySelector('.nav').style.position = 'static';
+    document.querySelector('.nav').style.flexDirection = 'row';
+    document.querySelector('.nav').style.justifyContent = 'center';
+    document.querySelector('.nav').style.alignItems = 'center';
+    document.querySelector('.nav').style.gap = '1.2rem';
+    document.querySelector('.nav').style.margin = '2rem 0 1.5rem 0';
+
+    // Add a home link to the nav
+    const homeLink = document.createElement('a');
+  </script>
+  <script>
+  const links = document.querySelectorAll('.planet-links a');
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const destination = this.href;
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 700); // match transition duration
+    });
+  });
+</script>
+
+  </div>
+</body>
+</html>
