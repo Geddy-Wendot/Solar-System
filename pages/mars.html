@@ -142,6 +142,24 @@ body.fade-out #page {
   opacity: 0;
 }
 
+ footer {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #77aabb;
+      padding: 2.5rem 1rem;
+      background: rgba(0,255,255,0.03);
+      border-top: 1px solid rgba(0,255,255,0.1);
+      animation: fadeIn 2s ease-in;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-left: 0.5rem;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+
   </style>
 </head>
 <body>
@@ -228,7 +246,10 @@ body.fade-out #page {
     });
   });
 </script>
-
+<footer>
+    &copy; 2025 Geddy Wendot <br>
+    | <a href="https://github.com/Geddy-Wendot" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  </footer>
   </div>
 </body>
 </html>
